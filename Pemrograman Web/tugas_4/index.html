@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles.css">
+		<title>Tugas : Kalkulator Sederhana</title>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Kalkulator Sederhana</h1>
+		</header>
+		
+	<main>
+		<section class="calc">
+			<h2>Input Bilangan</h2>
+
+			<div class="input-group">
+				<input type="text" id="bilangan1" placeholder="Masukkan Bilangan 1">
+				<input type="text" id="bilangan2" placeholder="Masukkan Bilangan 2">
+			</div>
+
+			<div class="button-group">
+				<button id="Tambah" onclick="tambah(bilangan1.value, bilangan2.value)">Tambah</button>
+				<button id="Kurang" onclick="kurang(bilangan1.value, bilangan2.value)">Kurang</button>
+				<button id="Kali" onclick="kali(bilangan1.value, bilangan2.value)">Kali</button>
+				<button id="Bagi" onclick="bagi(bilangan1.value, bilangan2.value)">Bagi</button>
+			</div>
+
+			<div class="hasil-box">
+				<p>Hasil:</p>
+				<div id="hasil">-</div>
+			</div>
+		</section>
+		</main>
+		
+		<script type="text/javascript" src="actions.js"></script>
+	</body>
+</html>

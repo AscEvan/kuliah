@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- bagian formulir -->
+        <section id="pendaftaran">
+            <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+            <form id="form-daftar" novalidate>
+                
+                <!-- data calon mahasiswa dan orangtua/wali -->
+                <fieldset>
+                    <legend>A. Data Calon Mahasiswa dan Orangtua/Wali</legend>
+                    
+                    <div class="form-group">
+                        <label for="nama">1. Nama Lengkap (sesuai STTB/STK)</label>
+                        <input type="text" id="nama" name="nama" required minlength="3" placeholder="Masukkan nama lengkap">
+                        <span class="pesan-error" id="error-nama"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">2. Jenis Kelamin</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                        </select>
+                        <span class="pesan-error" id="error-gender"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">3. Status</label>
+                        <select id="status" name="status" required>
+                            <option value="">-- Pilih Status --</option>
+                        </select>
+                        <span class="pesan-error" id="error-status"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agama">4. Agama</label>
+                        <select id="agama" name="agama" required>
+                            <option value="">-- Pilih Agama --</option>
+                        </select>
+                        <span class="pesan-error" id="error-agama"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kewarganegaraan">5. Kewarganegaraan</label>
+                        <select id="kewarganegaraan" name="kewarganegaraan" required>
+                            <option value="">-- Pilih Kewarganegaraan --</option>
+                        </select>
+                        <span class="pesan-error" id="error-kewarganegaraan"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">6. Alamat Asal</label>
+                        <textarea id="alamat" name="alamat" required minlength="10" placeholder="Jalan, Kabupaten/Kota, Provinsi"></textarea>
+                        <span class="pesan-error" id="error-alamat"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hp">7. No. HP</label>
+                        <input type="tel" id="hp" name="hp" required pattern="[0-9]{10,15}" placeholder="Contoh: 081234567890">
+                        <span class="pesan-error" id="error-hp"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">8. Alamat E-mail</label>
+                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" placeholder="nama@email.com">
+                        <span class="pesan-error" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama-ortu">9. Nama Orang Tua/Wali</label>
+                        <input type="text" id="nama-ortu" name="nama_ortu" required minlength="3" placeholder="Nama Orang Tua/Wali">
+                        <span class="pesan-error" id="error-nama-ortu"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pendidikan-ortu">Tingkat Pendidikan Orang Tua/Wali</label>
+                        <select id="pendidikan-ortu" name="pendidikan_ortu" required>
+                            <option value="">-- Pilih Tingkat Pendidikan --</option>
+                        </select>
+                        <span class="pesan-error" id="error-pendidikan-ortu"></span>
+                    </div>
+                </fieldset>
+
+                <!-- data Sekolah Menengah -->
+                <fieldset>
+                    <legend>B. Data Sekolah Menengah</legend>
+                    
+                    <div class="form-group">
+                        <label for="nama-sekolah">Nama Sekolah Asal</label>
+                        <input type="text" id="nama-sekolah" name="nama_sekolah" required minlength="3" placeholder="Contoh: SMA Negeri 1...">
+                        <span class="pesan-error" id="error-nama-sekolah"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat-sekolah">Alamat Sekolah</label>
+                        <textarea id="alamat-sekolah" name="alamat_sekolah" required minlength="5" placeholder="Alamat lengkap sekolah"></textarea>
+                        <span class="pesan-error" id="error-alamat-sekolah"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telp-sekolah">No. Telepon Sekolah</label>
+                        <input type="tel" id="telp-sekolah" name="telp_sekolah" required pattern="[0-9]{7,15}" placeholder="No telepon sekolah">
+                        <span class="pesan-error" id="error-telp-sekolah"></span>
+                    </div>
+                </fieldset>
+
+                <!-- program studi yang dipilih -->
+                <fieldset>
+                    <legend>C. Program Studi Yang Dipilih</legend>
+
+                    <!-- Pilihan I -->
+                    <div class="form-group">
+                        <label for="fakultas1">Pilihan I - Fakultas</label>
+                        <select id="fakultas1" name="fakultas1" required>
+                            <option value="">-- Pilih Fakultas --</option>
+                        </select>
+                        <span class="pesan-error" id="error-fakultas1"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="prodi1">Pilihan I - Program Studi</label>
+                        <select id="prodi1" name="prodi1" required disabled>
+                            <option value="">-- Pilih Program Studi --</option>
+                        </select>
+                        <span class="pesan-error" id="error-prodi1"></span>
+                    </div>
+
+                    <hr class="divider">
+
+                    <!-- Pilihan II -->
+                    <div class="form-group">
+                        <label for="fakultas2">Pilihan II - Fakultas</label>
+                        <select id="fakultas2" name="fakultas2" required>
+                            <option value="">-- Pilih Fakultas --</option>
+                        </select>
+                        <span class="pesan-error" id="error-fakultas2"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="prodi2">Pilihan II - Program Studi</label>
+                        <select id="prodi2" name="prodi2" required disabled>
+                            <option value="">-- Pilih Program Studi --</option>
+                        </select>
+                        <span class="pesan-error" id="error-prodi2"></span>
+                    </div>
+
+                    <hr class="divider">
+
+                    <!-- Pilihan III -->
+                    <div class="form-group">
+                        <label for="fakultas3">Pilihan III - Fakultas</label>
+                        <select id="fakultas3" name="fakultas3" required>
+                            <option value="">-- Pilih Fakultas --</option>
+                        </select>
+                        <span class="pesan-error" id="error-fakultas3"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="prodi3">Pilihan III - Program Studi</label>
+                        <select id="prodi3" name="prodi3" required disabled>
+                            <option value="">-- Pilih Program Studi --</option>
+                        </select>
+                        <span class="pesan-error" id="error-prodi3"></span>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+
+        <!-- sidebar  -->
+        <aside id="info-panduan">
+            <h3>Petunjuk Pengisian</h3>
+            <ul>
+                <li>Isi seluruh formulir dengan data yang valid dan sesuai dengan ijazah/STTB.</li>
+                <li>Pilih Fakultas terlebih dahulu untuk memunculkan pilihan Program Studi yang tersedia.</li>
+                <li>Pastikan alamat email dan nomor HP aktif untuk keperluan konfirmasi.</li>
+            </ul>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

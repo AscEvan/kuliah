@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Profil Saya : JS DOM</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Profil Saya</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#Tentang">Tentang</a></li>
+                    <li><a href="#Latar">Latar Pendidikan</a></li>
+                    <li><a href="#Portofolio">Portofolio</a></li>
+                    <li><a href="#Komentar">Komentar</a></li>
+                    <button id ="btn-tema">Mode Gelap</button>
+                </ul> 
+            </nav>
+        </header>
+
+        <main>
+            <section class="konten-kiri">
+                <table>
+                <tr>
+                    <td><img src="util/cat1.jpeg" alt="me" width="200" height="200"></td>
+                    <td><em>Lahir dan besar di Surakarta,<br> tapi sering berpindah-pindah kota sedari dulu</em></td>
+                </tr>
+                </table>
+            <br>
+
+            <section id="Tentang">
+                <h2>Tentang</h2>
+                    <article>
+                        <h3>Mengenal saya</h3>
+                            <p>
+                            <b>Ascentiano Evan</b>, dipanggil <b>Evan</b>. Lahir di Surakarta dan biasa<br>
+berpindah tempat tinggal, mulai dari solo, sukoharjo, batam, karangpandan, dan kalimantan.<br>Berumur
+19 tahun dan sedang menduduki bangku kuliah di Sanata Dharma-Informatika.<br>
+Mempunyai hobi seperti bersepeda, berenang, dan menggambar.
+                            </p>
+                    </article>
+            </section>
+            <br>
+
+            <section id="Latar">
+                <h2>Latar Pendidikan</h2>
+                    <article>
+                        <table>
+                            <tr>
+                                <th>Jenjang</th>
+                                <th>Wilayah</th>
+                            </tr>
+                            <tr>   
+                                <td>SD Santo Valentinus</td>
+                                <td>Surakarta</td>
+                            </tr>
+                            <tr>
+                                <td>SMPSK Santa Maria</td>
+                                <td>Pangkalanbun</td>
+                            </tr>
+                            <tr>
+                                <td>SMA Santo Yoseph</td>
+                                <td>Surakarta</td>
+                            </tr>
+                            <tr>
+                                <td>Universitas Sanata Dharma</td>
+                                <td>Yogyakarta</td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+                <br>
+
+                <section id="Portofolio">
+                    <h2>Portofolio</h2>
+                    <form id="form-portofolio" novalidate>
+                        <input type="text" id="input-judul" placeholder="Nama portofolio">
+                        <textarea id="input-isi" rows="2" placeholder="Deskripsi portofolio"></textarea>
+                        <p id="error-portofolio" class="error"></p>
+                        <button type="submit" id="btn-tambah">Tambah Portofolio</button>
+                    </form>
+                    
+<!--                     kartu porto -->
+                    <div class="daftar-artikel" id="daftar-portofolio"></div>
+                </section>
+                <br>   
+
+                <section id="Komentar">
+                    <h2>Komentar</h2>
+                    <form id="form-komentar" novalidate>
+                        <textarea id="input-komentar" rows="3" placeholder="Tulis komentar (minimal 5 karakter)..."></textarea>
+                        <p id="pesan-error" class="error"></p>
+                        <button type="submit">Kirim</button>
+                        <button type="button" id="btn-hapus-semua">Hapus semua komentar</button>
+                    </form>
+                    <div id="daftar-komentar"></div>
+                </section>
+                
+                </section>
+                    <aside>
+                        <h3>Kemampuan</h3>
+                            <pre>
+1. Memahami Python    : 80%
+2. Memahami Java      : 55%
+3. Memahami Html-css  : 15%
+                            </pre>
+                        <hr style="margin: 15px 0;">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="https://github.com/AscEvan">Github</a></li>
+                            <li><a href="mailto:eascentiano@gmail.com">Email</a></li>
+                        </ul>
+                    </aside>
+                    
+        </main>
+
+        <footer style="margin-top: 20px; text-align: center;">
+            <p>&copy; 2026 Profil saya.</p>
+        </footer>	
+
+        <button id="btn-atas" class="tersembunyi">&uarr; Kembali ke atas</button>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
